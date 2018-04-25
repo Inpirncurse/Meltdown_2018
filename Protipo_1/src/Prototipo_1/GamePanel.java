@@ -1,4 +1,4 @@
-package Prototipo_1;
+﻿package Prototipo_1;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -71,6 +71,7 @@ public class GamePanel extends JPanel implements Runnable {
 	
 	private void gameUpdate(){
 		juego.update();
+
 	/*	if(!isPaused && !gameOver){
 			circulo.move();
 		}

@@ -53,7 +53,7 @@ public class VillanoD extends Villano{
 		}else {
 			x-=1;
 		}
-		
+
 	}
 
 
@@ -61,6 +61,7 @@ public class VillanoD extends Villano{
 	public void seguirPersonaje(int liney) {
 		// TODO Auto-generated method stub
 		y=liney;
+
 	}
 
 

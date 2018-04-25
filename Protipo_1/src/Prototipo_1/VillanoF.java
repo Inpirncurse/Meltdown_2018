@@ -34,7 +34,6 @@ public class VillanoF extends Villano{
 			x-=2;
 		}
 		
-		
 	}
 
 	@Override

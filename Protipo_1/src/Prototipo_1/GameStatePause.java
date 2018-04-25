@@ -1,7 +1,8 @@
-package Prototipo_1;
+﻿package Prototipo_1;
 
 import java.awt.Color;
 import java.awt.Graphics;
+
 
 public class GameStatePause implements GameState {
 	GameContext gc;

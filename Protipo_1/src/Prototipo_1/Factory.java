@@ -34,6 +34,7 @@ public class Factory{
       
       return null;
     }
+
     public GameState createEnemigos(String tag) {
     	if(tag.equalsIgnoreCase("EnemigoD")) {
     		return (GameState) new VillanoD(10, 20);
@@ -45,4 +46,5 @@ public class Factory{
     	return null;
     }
     
+
  }

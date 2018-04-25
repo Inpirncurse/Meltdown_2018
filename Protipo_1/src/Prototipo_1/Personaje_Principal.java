@@ -8,6 +8,7 @@ import java.awt.event.KeyEvent;
 public class Personaje_Principal extends Personajes {
 	
 	private ImagesLoader img;
+
 	// Constructor principal
 	public Personaje_Principal(int x, int y) {
 		this.x = x;

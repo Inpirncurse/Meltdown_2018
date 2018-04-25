@@ -13,12 +13,14 @@ public class GameStateRunning implements GameState{
 	private Personaje_Principal ps;
 	private VillanoD vd;
 	private VillanoF vf;
+
 	//Estado run--Constructor
 	public GameStateRunning(GameContext gc){
 		this.gc = gc;
 		ps = new Personaje_Principal(50, 200);//creacion de personaje principal
 		vd = new VillanoD(150, 200);
 		vf = new VillanoF(150, 200);
+
 	}
 	
 	public void end(){
@@ -38,6 +40,7 @@ public class GameStateRunning implements GameState{
 		g.drawString("Estoy corriendo",20,20);
 		ps.draw(g);
 		vd.draw(g);
+
 	}
 	
 
@@ -52,6 +55,7 @@ public class GameStateRunning implements GameState{
 
 
 	
+
 	@Override
 	public void teclas(int n) {
 		// TODO Auto-generated method stub
