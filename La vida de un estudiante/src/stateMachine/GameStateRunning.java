@@ -22,10 +22,10 @@ public class GameStateRunning implements GameState{
 	private MainCharacter girl = (MainCharacter) Factory.getInstance().getEntity("girl");//esto no va aquí
 	
 	public void draw(Graphics dbg) {
-		
-		dbg.drawImage(ImageLoader.getImageLoader().getImage(0), 0, 0, null);
-		girl.setImage(ImageLoader.getImageLoader().getImage(3));
-		dbg.drawImage(girl.getImage(), girl.getX(), girl.getY(), null);
+        
+        dbg.drawImage(ImageLoader.getImageLoader().getImage(0), girl.getX(), girl.getY(), null);
+        girl.setImage(ImageLoader.getImageLoader().getImage(3));
+        dbg.drawImage(girl.getImage(), 50,  0, null);
 
 		
 	}

@@ -41,19 +41,19 @@ public class MainCharacter extends Entity implements Observer{
 	public void update(Subject subject) {
 		if (subject == KeyboardSubject.getInstance()) {
 			if(KeyboardSubject.getInstance().getLastPressed() == "right") {
-				x += 5;
+				x -= 5;
 				System.out.println("right2");
 			}
 			if(KeyboardSubject.getInstance().getLastPressed() == "left") {
-				x -= 5;
+				x += 5;
 				System.out.println("left2");
 			}
 			if(KeyboardSubject.getInstance().getLastPressed() == "down") {
-				y += 5;
+				y -= 5;
 				System.out.println("down2");
 			}
 			if(KeyboardSubject.getInstance().getLastPressed() == "up") {
-				y -= 5;
+				y += 5;
 				System.out.println("up2");
 			}
 			if(KeyboardSubject.getInstance().getLastPressed() == "attack") {
