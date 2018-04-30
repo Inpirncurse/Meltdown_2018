@@ -1,6 +1,8 @@
 package singleton;
 
 import characters.MainCharacter;
+import characters.WeakEnemy;
+import characters.StrongEnemy;
 import entities.Entity;
 import game.Pencil;
 import stateMachine.GameState;
@@ -10,7 +12,6 @@ import stateMachine.GameStateStart;
 
 public class Factory {
 	
-
 	private static Factory instance;
 
 	private Factory(){}
@@ -46,13 +47,23 @@ public class Factory {
     
     public Entity getEntity(String tag) {
     	if(tag.equalsIgnoreCase("girl")){
-	   		
+    		
 	    	return new MainCharacter();
-	    	
       }
+
     	if (tag.equalsIgnoreCase("pencil")) {
     		return new Pencil();
     	}
+
+		if(tag.equalsIgnoreCase("wGato")){
+		   		
+		    	return new WeakEnemy();
+	  }
+		if(tag.equalsIgnoreCase("sGato")){
+	   		
+	    	return new StrongEnemy();
+  }
+		
     	return null;
     }
     
