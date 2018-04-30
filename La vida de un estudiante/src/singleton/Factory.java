@@ -2,6 +2,7 @@ package singleton;
 
 import characters.MainCharacter;
 import entities.Entity;
+import game.Pencil;
 import stateMachine.GameState;
 import stateMachine.GameStateOver;
 import stateMachine.GameStateRunning;
@@ -49,6 +50,10 @@ public class Factory {
 	    	return new MainCharacter();
 	    	
       }
+    	if (tag.equalsIgnoreCase("pencil")) {
+    		return new Pencil();
+    	}
     	return null;
     }
+    
 }

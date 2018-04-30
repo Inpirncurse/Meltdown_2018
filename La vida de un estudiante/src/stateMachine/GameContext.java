@@ -32,5 +32,9 @@ public class GameContext {
 	public void setState(GameState state) {currentState = state;}
 	public void draw(Graphics dbg) {currentState.draw(dbg);}
 	public void clickMouse(MouseEvent e) {currentState.clickMouse(e);}
+	public GameState getState () { return currentState;}
+	public GameState getStart () { return start;}
+	public GameState getRun () { return run;}
+	public GameState getGO () { return go;}
 	
 }

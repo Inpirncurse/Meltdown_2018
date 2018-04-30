@@ -29,32 +29,39 @@ public class KeyboardSubject implements Subject, KeyListener {
 	
 	public void keyPressed(KeyEvent key) {
 		if (key.getKeyCode() == KeyEvent.VK_RIGHT) {
-			notifyObserver();
 			lastPressed = "right";
+			notifyObserver();
+			
 			System.out.println("right");
 		}
 		if (key.getKeyCode() == KeyEvent.VK_LEFT) {
-			notifyObserver();
 			lastPressed = "left";
+			notifyObserver();
+			
 			System.out.println("left");
 		}
 		if (key.getKeyCode() == KeyEvent.VK_DOWN) {
-			notifyObserver();
 			lastPressed = "down";
+			notifyObserver();
+			
 			System.out.println("down");
 		}
 		if (key.getKeyCode() == KeyEvent.VK_UP) {
-			notifyObserver();
 			lastPressed = "up";
+			notifyObserver();
+			
 			System.out.println("up");
 		}
 		if (key.getKeyCode() == KeyEvent.VK_SPACE) {
-			notifyObserver();
+			
 			lastPressed = "attack";
+			notifyObserver();
 		}
 		if (key.getKeyCode() == KeyEvent.VK_ESCAPE) {
+
+			lastPressed = "exit";
 			notifyObserver();
-			lastPressed = "leave";
+			
 		}
 	}
 	
