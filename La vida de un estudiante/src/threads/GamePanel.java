@@ -120,9 +120,11 @@ public class GamePanel extends JPanel implements Runnable {
 
     public static void main(String args[]){
     	
-    	JFrame panel = new JFrame("Guest it!!!");
-    	Clipi sonido = new Clipi("BG.wav");
-    	sonido.play();
+    	JFrame panel = new JFrame("LA VIDA DE UN ESTUDIANTE");
+    	Clipi sonido1 = new Clipi("/LVDU.wav");
+    	sonido1.play();
+    	Clipi sonido2 = new Clipi("/BG.wav");
+    	sonido2.play();
 		panel.setContentPane(new GamePanel());
 		panel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		panel.setVisible(true);

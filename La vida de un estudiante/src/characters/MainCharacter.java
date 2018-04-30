@@ -7,6 +7,7 @@ import entities.Entity;
 import observer.KeyboardSubject;
 import observer.Observer;
 import observer.Subject;
+import sonidos.Clipi;
 
 public class MainCharacter extends Entity implements Observer{
 	private int vida = 100;
@@ -66,7 +67,8 @@ public class MainCharacter extends Entity implements Observer{
 				y -= 25;
 			}
 			if(KeyboardSubject.getInstance().getLastPressed() == "attack") {
-				
+				Clipi sonido = new Clipi("/TE.wav");
+		    	sonido.play();
 			}
 			if(KeyboardSubject.getInstance().getLastPressed() == "leave") {
 				
