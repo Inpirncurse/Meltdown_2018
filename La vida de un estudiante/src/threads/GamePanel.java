@@ -11,6 +11,7 @@ import java.awt.*;
 import javax.swing.*;
 
 import observer.KeyboardSubject;
+import sonidos.Clipi;
 import stateMachine.GameContext;
 
 public class GamePanel extends JPanel implements Runnable {
@@ -120,6 +121,8 @@ public class GamePanel extends JPanel implements Runnable {
     public static void main(String args[]){
     	
     	JFrame panel = new JFrame("Guest it!!!");
+    	Clipi sonido = new Clipi("BG.wav");
+    	sonido.play();
 		panel.setContentPane(new GamePanel());
 		panel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		panel.setVisible(true);
@@ -127,5 +130,6 @@ public class GamePanel extends JPanel implements Runnable {
 		panel.setResizable(true);	
 		panel.pack();	
 		panel.setLocationRelativeTo(null);
+		
     }
 }

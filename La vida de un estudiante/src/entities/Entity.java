@@ -5,7 +5,6 @@ import java.awt.image.BufferedImage;
 
 import characters.WeakEnemy;
 
-
 public abstract class Entity {
 	protected int x = 0;
 	protected int y = 0;
@@ -15,7 +14,6 @@ public abstract class Entity {
 	protected double rotGrades = 0;
 	protected Color color;
 	protected Rectangle box = new Rectangle(x, y, w, h);
-	protected BufferedImage image;
 	
 	public Entity() {}
 	
@@ -24,12 +22,10 @@ public abstract class Entity {
 	}
 	public void setX(int x) {
 		this.x = x;
-
-		box.setBounds(x, y, w, h);
+		box.setBounds(x,y,w,h);
 	}
 	public int getY() {
 		return y;
-		
 	}
 	public void setY(int y) {
 		this.y = y;
@@ -40,16 +36,13 @@ public abstract class Entity {
 	}
 	public void setW(int w) {
 		this.w = w;
-
-		box.setBounds(x, y, w, h);
-
+		box.setBounds(x,y,w,h);
 	}
 	public int getH() {
 		return h;
 	}
 	public void setH(int h) {
 		this.h = h;
-
 		box.setBounds(x,y,w,h);
 	}
 	public Color getColor() {
@@ -58,14 +51,8 @@ public abstract class Entity {
 	public void setColor(Color color) {
 		this.color = color;
 	}
-	public BufferedImage getImage() {
-		return image;
-	}
-
-
-	public void setImage(BufferedImage image) {
-		this.image = image;
-	}
+	
+	
 	public abstract void update();
 	public abstract void render(Graphics dbg);
 	

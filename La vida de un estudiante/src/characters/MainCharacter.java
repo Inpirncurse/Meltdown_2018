@@ -1,71 +1,69 @@
 package characters;
 
 import java.awt.Graphics;
-import java.util.ArrayList;
+import java.awt.image.BufferedImage;
 
 import entities.Entity;
-import game.Pencil;
 import observer.KeyboardSubject;
 import observer.Observer;
 import observer.Subject;
 
-
 public class MainCharacter extends Entity implements Observer{
 	private int vida = 100;
 	boolean bandera = false;
-	public Pencil pencil;
-	//private  ArrayList<Pencil> pencil = new ArrayList<>();
+	private BufferedImage image;
 
-	
 	public MainCharacter () {
 		KeyboardSubject.getInstance().subscribe(this);
 		x = 100;
 		y = 100;
-      
 	}
 		
-	
-
-	public Pencil getPencil() {
-		return pencil;
-	}
-
-
-
-	public void setPencil(Pencil pencil) {
-		this.pencil = pencil;
-	}
-
-
-
 	public int getVida() {
 		return vida;
 	}
+
 
 	public void setVida(int vida) {
 		this.vida = vida;
 	}
 
+
+	public BufferedImage getImage() {
+		return image;
+	}
+
+	public void setImage(BufferedImage image) {
+		this.image = image;
+	}
 	
+	public void collision() {
+
+	}
+
+
 	public void update() {}
 	public void render(Graphics dbg) {}
 	public void update(Subject subject) {
 		if (subject == KeyboardSubject.getInstance()) {
+			
+			collision();
+			
 			if(KeyboardSubject.getInstance().getLastPressed() == "right") {
-				x += 20;
-				System.out.println("right2");
+				if(x <= 1000)
+					x += 25;
 			}
 			if(KeyboardSubject.getInstance().getLastPressed() == "left") {
-				x -= 20;
-				System.out.println("left2");
+				if(x >= 50)
+					x -= 25;
 			}
 			if(KeyboardSubject.getInstance().getLastPressed() == "down") {
-				y += 20;
-				System.out.println("down2");
+				if(y <= 455)
+					y += 25;
 			}
 			if(KeyboardSubject.getInstance().getLastPressed() == "up") {
-				y -= 20;
-				System.out.println("up2");
+				if(y >= 10)
+				y -= 25;
 			}
 			if(KeyboardSubject.getInstance().getLastPressed() == "attack") {
 				
@@ -73,11 +71,6 @@ public class MainCharacter extends Entity implements Observer{
 			if(KeyboardSubject.getInstance().getLastPressed() == "leave") {
 				
 			}
-			
-		
-			
 		}
 	}
-
-
 }

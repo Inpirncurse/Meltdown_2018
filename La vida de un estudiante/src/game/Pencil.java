@@ -1,7 +1,7 @@
 package game;
 
 import java.awt.Graphics;
-
+import java.awt.image.BufferedImage;
 
 import entities.Entity;
 import observer.KeyboardSubject;
@@ -14,8 +14,16 @@ import singleton.Cage;
 public class Pencil extends Entity implements Observer{
 	
 	boolean flag = false; 
-
+	BufferedImage image;
 	
+	public BufferedImage getImage() {
+		return image;
+	}
+
+	public void setImage(BufferedImage image) {
+		this.image = image;
+	}
+
 	public boolean getBandera() {
 		return flag;
 	}

@@ -14,7 +14,6 @@ public class WeakEnemy extends Entity{
 	private int limitX = 1100;
 	private int limitY = 600;
 	
-	//public WeakEnemy() {}
 	public WeakEnemy() {
 		x = 800;
 		y = 500;
@@ -33,8 +32,7 @@ public class WeakEnemy extends Entity{
 	}
 	
 	public void update() {
-		if(box.intersects(box))
-			
+
 			if((this.x + radio) >= limitX) {
 				addX = -addX;
 				x = (limitX-10) - radio;
